@@ -1,0 +1,20 @@
+ingestion:
+  preferred_encodings: ["utf-8", "latin-1", "cp1252"]
+
+normalize:
+  remove_headers_footers: true
+  deduplicate: true
+  collapse_whitespace: true
+  strip_metadata: true
+
+chunking:
+  target_tokens: 400
+  hard_max_tokens: 800
+  overlap_tokens: 40
+  split_on_headings: true
+
+metadata:
+  default_tags: ["markdown", "dataset", "llm"]
+
+export:
+  formats: ["jsonl", "csv", "parquet"]
